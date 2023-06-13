@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loaderBodyHide" id="loaderBodyHide">
+    <div class="digitalTime">
+        <span id="dTime"></span>
+    </div>
+    <div class="calculator">
+        <div id="result">
+            <input type="text" id="value" style="width:100%">
+        </div>
+        <div id="clear">
+            <span>C</span>
+        </div>
+        <div id="backSpace">
+            <span>B</span>
+        </div>
+        <div id="division">
+            <span>/</span>
+        </div>
+        <div id="multiply"> 
+            <span>&times;</span>
+        </div>
+        <div id="n7">
+            <span>7</span>
+        </div>
+        <div id="n8">
+            <span>8</span>
+        </div>
+        <div id="n9">
+            <span>9</span>
+        </div>
+        <div id="minus">
+            <span>-</span>
+        </div>
+        <div id="n4">
+            <span>4</span>
+        </div>
+        <div id="n5"> 
+            <span>5</span>
+        </div>
+        <div id="n6">
+            <span>6</span>
+        </div>
+        <div id="add">
+            <span>+</span>
+        </div>
+        <div id="n1">
+            <span>1</span>
+        </div>
+        <div id="n2">
+            <span>2</span>
+        </div>
+        <div id="n3">
+            <span>3</span>
+        </div>
+        <div id="equal">
+            <span>=</span>
+        </div>
+        <div id="zero">
+            <span>0</span>
+        </div>
+        <div id="dot">
+            <span>.</span>
+        </div>
+        
+    </div>
+    
+
+    <form name="contactForm" onsubmit="return validateForm()" method="post">
+        <h2>Application Form</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name" id="chars">
+            <button id="charcount">CharCount</button>
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="row">
+            <label>Password</label>
+            <input type="password" name="password" id="showing">
+            <span><input type="checkbox" id="showpasswd">Show Password</span>
+            <div class="error" id="passwdErr"></div>
+
+        </div>
+        <div class="row">
+            <label>Country</label>
+            <select name="country">
+                <option>Select</option>
+                <option>Australia</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+            </select> 
+            <div class="error" id="countryErr"></div>
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label> 
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+            </div>
+        </div>        
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <br> <br> <br> <br> <br><br><br>
+    <div class="padding">
+    <div>
+        <h3>Convert Currency</h3>
+        <label for="amount">amount</label>
+        <input type="number" name="amount" id="amount">
+        <br>
+        <label for="fromCurrency">From:</label>
+        <select name="fromCurrency" id="fromCurrency">
+            <option>Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+           
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="toCurrency">To:</label>
+        <select name="toCurrency" id="toCurrency">
+            <option>Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+        &nbsp;&nbsp;
+        <button id="curConvert">Convert</button>
+        <button id="darkWhiteMode">Dark/white Mode</button>
+
+
+    </div>
+    <br>
+    <div>
+        <label for="tempF">Fahrenheit</label>
+        <input type="number" name="tempF" id="tempF">
+        <span>Celcius : <span id="tempC"></span> </span>
+    </div>
+    
+    <div>
+        <label for="guess">Guess a number between 1 and 10</label>
+        <input type="number" name="guess" id="guess">
+        <button id="checkGuess">Check</button>
+    </div>
+    <br>
+    <div>
+        <span>Length Converter</span>
+        <input type="text" id="inpVal">
+        <select name="fromLen" id="fromLen">
+            <option>Select</option>
+            <option>KM</option>
+            <option>M</option>
+            <option>CM</option>
+        </select>
+
+        <select name="toLen" id="toLen">
+            <option>Select</option>
+            <option>KM</option>
+            <option>M</option>
+            <option>CM</option>
+        </select>
+        <button id="convLen">Convert</button>
+    </div>
+
+    <div>
+        <button id="timedChange" onclick="setTimeout (bgChange, 3000)">Change Background(after 3sec)</button>
+    </div>
+
+    <div>
+        <label for="speech">Enter some Text to listen</label>
+        <input type="text" name="speech" id="textSpeak">
+    </div>
+
+    <div>
+        <span>List of passed Students</span>
+        <input type="text" name="" id="searchStud" onkeyup="searching()">
+        <ol type="1">
+            <li class="passed">Sriram</li>
+            <li class="passed">Lucky</li>
+            <li class="passed">Sycho</li>
+            <li class="passed">Yadav</li>
+            <li class="passed">Chittimenu</li>
+            <li class="passed">Whiteu</li>
+            <li class="passed">kkk</li>
+            <li class="passed">Minus</li>
+            <li class="passed">Maneesh</li>
+            <li class="passed">Venky</li>
+        </ol>
+    </div>
+    
+    <div>
+        <input type="text" name="" id="copyHere">
+        <button id="copy">Copy Text</button>
+        <span id="notice"></span>
+    </div>
+
+
+    <div>
+        <label for="key">Press any key in Keyboard</label>
+        <input type="text" name="key" id="key" >
+        <span id="pressedKey"></span>
+    </div>
+    <div>
+      <button id="dice" style="padding:20px">Dice</button>  
+    </div>
+</div>
+
+    </div>
+    <div class="loadpos" id="loadpos">
+    <div class="loader"></div>
+    </div>
+
+    
+   
+    <script src="script.js"></script>
+</body>
+</html>

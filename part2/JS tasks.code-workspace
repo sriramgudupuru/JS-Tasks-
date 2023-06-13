@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"name": "JS tasks",
+		"path": ".."
+	},
+	{
+		"name": "ReactJs",
+		"path": "../../../ReactJs"
+	},
+	{
+		"name": "Checking",
+		"path": "../../../Checking"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "JS tasks"
+  }
+}

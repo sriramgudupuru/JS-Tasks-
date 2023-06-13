@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS tasks</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <p>Click here <button id="btn">MOdal Box</button> to open modal box</p>
+
+    <div class="mbox" id="mbox">
+        <div id="content">
+            <p style="display: inline-block;">This is modal box</p>
+            <span>&times;</span>   
+        </div>
+    </div>
+
+    <div class="randcolor">
+        <h1>
+            <button id="newColor">Click for Random Color</button>
+            <span id="color"></span>
+        </h1>
+    </div>
+
+    <div class="randnum"> 
+            <button id="randNum">Random Number</button>
+            <span id="number"></span> 
+    </div>
+    <br><br>
+    <div class="counter">
+            <button id="counter">Count</button>
+            <span id="displayCount"></span>
+    </div>
+
+    <div class="borderRadi">
+        <span id="borderChanging" style="border:solid 3px;">set my BorderRadius</span>
+        <input type="number" name="borderRadi" id="topLeft" step="1" placeholder="TopLeft">
+        <input type="number" name="borderRadi" id="topRight" step="1" placeholder="topRight">
+        <input type="number" name="borderRadi" id="bottomLeft" step="1" placeholder="botLeft">
+        <input type="number" name="borderRadi" id="bottomRight" step="1" placeholder="botRight">
+
+        
+    </div>
+
+    <div class=boxShadow id="changeShadow">
+        <p >Set BoxShadow</p>
+        <section class="boxProperties">
+            <input type="number" name="hShadow" id="hShadow" placeholder="hShadow">
+            <input type="number" name="vShadow" id="vShadow" placeholder="vShadow">
+            <input type="number" name="blur" id="blur" placeholder="blur">
+            <input type="number" name="spread" id="spread" placeholder="spread">
+            <input type="color" name="shadowColor" id="shadowColor" placeholder="shadowColor" style="width:87px">
+            <input type="text" id="inoutSet" placeholder="in/outset">
+        </section>
+    </div>
+    <!-- <img src="images/nityamenon.PNG" alt="smilingNityamenon" id="nityaMenon" width="50px"> -->
+    <div class="filter">
+        <img src="images/filter.PNG" alt="vinayaka_funzone" id="vinayaka">
+        
+        <section class="filter_input">
+            <h4>&nbsp;apply filter to beside image</h4>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="none" >
+            <span>filter:</span>
+            <label for="none">none</label>
+            <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="blur(5px)">
+            <span>filter:</span>
+            <label for="blur">blur(5px)</label>
+            <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="brightness(200%)">
+            <span>filter:</span>
+            <label for="brightness">brightness(200%)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="contrast(200%)">
+            <span>filter:</span>
+            <label for="contrast">Contrast(200%)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="drop-shadow(8px 8px 10px gray)">
+            <span>filter:</span>
+            <label for="">drop-shadow
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="grayscale(100%)">
+            <span>filter:</span>
+            <label for="">grayscale(100%)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="hue-rotate(90deg)">
+            <span>filter:</span>
+            <label for="hue-rotate">hue-rotate(90deg)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="invert(100%)">
+            <span>filter:</span>
+            <label for="invert">invert(100%)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="opacity(30%)">
+            <span>filter:</span>
+            <label for="opacity">opacity
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="saturate(8)">
+            <span>filter:</span>
+            <label for="saturate">saturate
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="sepia(100%)">
+            <span>filter:</span>
+            <label for="">sepia(100%)
+                <br>
+            <input type="radio" name="filter" onclick="filterimg(this.value)" value="contrast(200%) brightness(150%)">
+            <span>filter:</span>
+            <label for="">Contrast(200%) brightness(150%)</label>
+        </section>
+        <section class="borderSlider">
+            <label for="slider">whole_border:</label>
+            <input type="range" min="1" max="100" name="slider" id="wholeBorder">
+            <br>
+            <label for="slide">topLeft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" min="1" max="100" name="slide" id="topLeftSlide">
+            <br>
+            <label for="slider">topRight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" min="1" max="100" name="slider" id="topRightSlide">
+            <br>
+            <label for="slider">bottomLeft:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" min="1" max="100" name="slider" id="bottomLeftSlide">
+            <br>
+            <label for="slider">bottomRight:&nbsp;&nbsp;</label>
+            <input type="range" min="1" max="100" name="slider" id="bottomRightSlide">
+            <br>
+            <label for="slider">X-direction</label>
+            <input type="range" min="1" max="100" name="slider" id="xdir">
+            <br>
+            <label for="slider">Y-direction</label>
+            <input type="range" min="1" max="100" name="slide" id="ydir">
+            <br>
+        </section>
+    </div>
+
+    <div class="bg">
+        <br><br><br>
+        <span style="display: block;">Choose a Background</span>
+        <img src="images/bg1.jpeg" alt="background1" width="100px" height="100px" id="bg1">
+        <img src="images/bg2.jpeg" alt="background2" width="100px" height="100px" id="bg2">
+        <img src="images/bg3.jpeg" alt="background3" width="100px" height="100px" id="bg3">
+        <div style="display: inline-block;width:100px; height: 100px;">let Random color be background</div>
+    </div>
+
+    <div>
+        <span id="countDown" style="font-size: 25px;"></span>></span>
+        <br><br>
+        <label for="dob">Enter your Date of birth:</label>
+        <input type="date" name="dob" id="dob"> <span id="age">age:</span>
+    </div>
+
+    <div class="footer">
+        <span id="year" style="font-size: 40px;"></span>
+    </div>
+
+
+<script src="index.js"></script>
+
+</body>
+</html>

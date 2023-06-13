@@ -1,0 +1,48 @@
+.navbar {
+    display:flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 30px;
+}
+
+.hiddenLinks{
+    display: none;
+    flex-direction: column;
+    margin-left: 340px;
+
+    /* z-index:1; */
+    /* background-color:red; */
+    
+    
+}
+ .hiddenLinks a{
+    font-size: 20px;
+    text-decoration: none;
+    /* background-color:red; */
+    display: block;
+    padding:0px 30px 30px 30px;
+ }
+
+ #burger {
+    cursor:pointer;
+    position: relative;
+    float:right;
+    /* top:-30px;
+    right:40px; */
+ }
+
+
+
+
+
+
+.sticky {
+    position:fixed;
+    top:0;
+}
+
+.stick {
+    position:fixed;
+    top:0;
+}
